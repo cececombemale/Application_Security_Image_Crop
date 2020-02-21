@@ -17,8 +17,7 @@ except:
   
 # Size of the image in pixels (size of orginal image) 
 width, height = im.size 
-print(width)
-print(height)
+
 
 #instantiate new variable for cropped image
 new = im
