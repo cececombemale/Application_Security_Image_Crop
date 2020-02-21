@@ -1,4 +1,4 @@
-# Booktrader
+# Image Cropper
 ## Cecilia Combemale
 
 ## Running Instructions
