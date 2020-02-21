@@ -17,9 +17,11 @@ except:
   
 # Size of the image in pixels (size of orginal image) 
 width, height = im.size 
+print(width)
+print(height)
 
 #instantiate new variable for cropped image
-new = 0
+new = im
 
 #if the image is wider than it is long, take pixels off the left and right
 #side so that the width equals the height (square) and the image is centered
@@ -30,7 +32,7 @@ if width > height:
 
 #if the image is longer than it is wide, take pixels off the top and bottom
 #so that the height equals the width (square) and the image is centered
-elif height > width:
+if height > width:
 	dif = height-width
 	dif = dif/2
 	new = im.crop((0, dif, width, height-dif)) 
