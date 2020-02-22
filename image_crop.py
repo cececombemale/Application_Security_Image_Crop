@@ -10,31 +10,31 @@ except:
 	sys.exit(0)
 #open the image
 try:
-	im = Image.open(name)
+	img = Image.open(name)
 except: 
 	print("The image could not be opened, try again with another format")
 	sys.exit(0)
   
 # Size of the image in pixels (size of orginal image) 
-width, height = im.size 
+width, height = img.size 
 
 
 #instantiate new variable for cropped image
-new = im
+new = img
 
 #if the image is wider than it is long, take pixels off the left and right
 #side so that the width equals the height (square) and the image is centered
 if width > height:
 	dif = width-height
 	dif = dif/2
-	new = im.crop((dif,0, width-dif, height)) 
+	new = img.crop((dif,0, width-dif, height)) 
 
 #if the image is longer than it is wide, take pixels off the top and bottom
 #so that the height equals the width (square) and the image is centered
 if height > width:
 	dif = height-width
 	dif = dif/2
-	new = im.crop((0, dif, width, height-dif)) 
+	new = img.crop((0, dif, width, height-dif)) 
   
 # save new image 
 new.save("new"+name)
